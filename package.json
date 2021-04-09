@@ -1,0 +1,45 @@
+{
+  "name": "prettier-config-base",
+  "version": "1.0.0",
+  "description": "prettier arlex's project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx prettier --check --no-config --config .prettierrc.js ./test",
+    "test:fix": "npx prettier --write --no-config --config .prettierrc.js ./test",
+    "prettier": "npx prettier --check --no-config --config .prettierrc.js ./",
+    "prettier:fix": "npx prettier --write --no-config --config .prettierrc.js ./",
+    "lint:fix": "npx eslint --no-eslintrc -c .eslintrc.js --ext js,vue --fix ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhoutengjiao/prettier-config-base.git"
+  },
+  "keywords": ["prettier", "arlex"],
+  "author": "zhoutengjiao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhoutengjiao/prettier-config-base/issues"
+  },
+  "homepage": "https://github.com/zhoutengjiao/prettier-config-base#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "{src,test}/**/*.js": [
+      "npm run lint:fix",
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@arlex/eslint-config-base": "^1.0.3",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "eslint": "^6.8.0",
+    "lint-staged": "^10.5.1",
+    "husky": "^4.3.0",
+    "prettier": "^2.0.1"
+  }
+}
