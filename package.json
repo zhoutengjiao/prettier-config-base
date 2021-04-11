@@ -4,17 +4,21 @@
   "description": "prettier arlex's project.",
   "main": "index.js",
   "scripts": {
-    "test": "npx prettier --check --no-config --config .prettierrc.js ./test",
-    "test:fix": "npx prettier --write --no-config --config .prettierrc.js ./test",
-    "prettier": "npx prettier --check --no-config --config .prettierrc.js ./",
-    "prettier:fix": "npx prettier --write --no-config --config .prettierrc.js ./",
+    "configpath": "npx prettier --find-config-path ./",
+    "test": "npx prettier --check --config .prettierrc.js ./test",
+    "test:fix": "npx prettier --write --config .prettierrc.js ./test",
+    "prettier": "npx prettier --check --config .prettierrc.js ./",
+    "prettier:fix": "npx prettier --write --config .prettierrc.js ./",
     "lint:fix": "npx eslint --no-eslintrc -c .eslintrc.js --ext js,vue --fix ./"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhoutengjiao/prettier-config-base.git"
   },
-  "keywords": ["prettier", "arlex"],
+  "keywords": [
+    "prettier",
+    "arlex"
+  ],
   "author": "zhoutengjiao",
   "license": "ISC",
   "bugs": {

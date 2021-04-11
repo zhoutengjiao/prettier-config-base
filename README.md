@@ -1,6 +1,7 @@
 
 # @arlex/prettier-config-base
-prettier arlex's project.
+Prettier arlex's project.
+Used for prettier plugin.
 
 ## installation
 ```shell
