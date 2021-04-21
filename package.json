@@ -32,7 +32,11 @@
     }
   },
   "lint-staged": {
-    "{src,test}/**/*.js": [
+    "{src,test}/**/*.{js, vue}": [
+      "npm run lint:fix",
+      "prettier --write"
+    ],
+    "index.js": [
       "npm run lint:fix",
       "prettier --write"
     ]
