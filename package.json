@@ -1,7 +1,7 @@
 {
-  "name": "prettier-config-base",
-  "version": "1.0.0",
-  "description": "prettier arlex's project.",
+  "name": "@arlex/prettier-config-base",
+  "version": "1.0.1",
+  "description": "rules for prettier arlex's project.",
   "main": "index.js",
   "scripts": {
     "configpath": "npx prettier --find-config-path ./",
